@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "InfoEstudante",
+  "description": "Automatic Login In InfoEstudante",
+  "icons": {
+    "16": "piaget_icon.png",
+    "48": "piaget_icon.png",
+    "128": "piaget_icon.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://inforestudante.ipiaget.org/nonio/security/login.do"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
